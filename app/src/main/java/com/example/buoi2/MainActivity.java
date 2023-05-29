@@ -15,10 +15,9 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textView_phepTinh, textView_ketQua;
     Button btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9, btn_0;
-    Button btn_phepCong, btn_phepTru, btn_phepNhan, btn_PhepChia, btn_ngoac1, btn_ngoac2, btn_C, btn_AC, btn_dauBang, btn_dauPhay;
+    Button btn_phepCong, btn_phepTru, btn_phepNhan, btn_PhepChia, btn_phanTram, btn_C, btn_AC, btn_dauBang, btn_dauPhay;
     
     String data;
-    String key = "7749";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,21 +104,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_ngoac1.setOnClickListener(new View.OnClickListener() {
+        btn_phanTram.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 data = textView_phepTinh.getText().toString();
-                textView_phepTinh.setText(data+"(");
+                textView_phepTinh.setText(data+"%");
             }
         });
-
-        btn_ngoac2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                data = textView_phepTinh.getText().toString();
-                textView_phepTinh.setText(data+")");
-            }
-        });
+//
+//        btn_ngoac2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                data = textView_phepTinh.getText().toString();
+//                textView_phepTinh.setText(data+")");
+//            }
+//        });
 
         btn_dauPhay.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -176,26 +175,22 @@ public class MainActivity extends AppCompatActivity {
 
                 data = data.replaceAll("x", "*");
                 data = data.replaceAll("÷", "/");
+                data = data.replaceAll("%", "/100");
 
                 Context rhioContext= Context.enter();
                 rhioContext.setOptimizationLevel(-1);
 
                 String ketquacuoicung="";
 
-                Scriptable scriptable = rhioContext.initStandardObjects();
-                ketquacuoicung = rhioContext.evaluateString(scriptable, data,"Javsscript", 1, null).toString();
-
-                textView_ketQua.setText(ketquacuoicung);
-                if(textView_phepTinh.getText().toString().equals(key) ){
-                    
+                try {
+                    Scriptable scriptable = rhioContext.initStandardObjects();
+                    ketquacuoicung = rhioContext.evaluateString(scriptable, data,"Javsscript", 1, null).toString();
+                }catch (Exception e){
+                    ketquacuoicung = "Lỗi";
                 }
-                
+                textView_ketQua.setText(ketquacuoicung);
             }
         });
-        
-
-        
-       
     }
 
     private void anhXa(){
@@ -223,8 +218,8 @@ public class MainActivity extends AppCompatActivity {
 
         btn_dauBang = findViewById(R.id.btn_dauBang);
         btn_dauPhay = findViewById(R.id.btn_dauPhay);
-        btn_ngoac1 = findViewById(R.id.btn_ngoac1);
-        btn_ngoac2 = findViewById(R.id.btn_ngoac2);
+        btn_phanTram = findViewById(R.id.btn_phanTram);
+//        btn_ngoac2 = findViewById(R.id.btn_ngoac2);
 
     }
 
