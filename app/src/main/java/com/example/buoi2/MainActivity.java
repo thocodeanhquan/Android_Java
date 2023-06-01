@@ -2,9 +2,12 @@ package com.example.buoi2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,7 +18,9 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textView_phepTinh, textView_ketQua;
     Button btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9, btn_0;
-    Button btn_phepCong, btn_phepTru, btn_phepNhan, btn_PhepChia, btn_phanTram, btn_C, btn_AC, btn_dauBang, btn_dauPhay;
+    Button btn_phepCong, btn_phepTru, btn_phepNhan, btn_PhepChia, btn_phanTram, btn_AC, btn_dauBang, btn_dauPhay;
+
+    ImageButton btn_history, btn_os;
     
     String data;
     @Override
@@ -186,13 +191,29 @@ public class MainActivity extends AppCompatActivity {
                     Scriptable scriptable = rhioContext.initStandardObjects();
                     ketquacuoicung = rhioContext.evaluateString(scriptable, data,"Javsscript", 1, null).toString();
                 }catch (Exception e){
+
                     ketquacuoicung = "Lỗi";
+
+                }
+
+                if(ketquacuoicung.equals("107204.107204")){
+                    Intent intent = new Intent(MainActivity.this, HideMenu.class);
+                    startActivity(intent);
                 }
                 textView_ketQua.setText(ketquacuoicung);
+            }
+
+        });
+        btn_os.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, VersionActivity.class);
+                startActivity(intent);
             }
         });
     }
 
+    @SuppressLint("WrongViewCast")
     private void anhXa(){
         textView_phepTinh = findViewById(R.id.textView_phepTinh);
         textView_ketQua = findViewById(R.id.textView_ketQua);
@@ -209,7 +230,8 @@ public class MainActivity extends AppCompatActivity {
         btn_9 = findViewById(R.id.btn_9);
 
         btn_AC = findViewById(R.id.btn_Ac);
-        btn_C = findViewById(R.id.btn_C);
+        btn_history = findViewById(R.id.btn_history);
+        btn_os = findViewById(R.id.btn_Os);
 
         btn_phepCong = findViewById(R.id.btn_phepCong);
         btn_phepTru = findViewById(R.id.btn_phepTru);
@@ -219,7 +241,6 @@ public class MainActivity extends AppCompatActivity {
         btn_dauBang = findViewById(R.id.btn_dauBang);
         btn_dauPhay = findViewById(R.id.btn_dauPhay);
         btn_phanTram = findViewById(R.id.btn_phanTram);
-//        btn_ngoac2 = findViewById(R.id.btn_ngoac2);
 
     }
 

@@ -7,7 +7,7 @@
             <size android:width="20dp"
                 android:height="20dp"/>
 
-            <solid android:color="#352B47"/>
+            <solid android:color="#139A9A"/>
             <corners android:radius="400dp"/>
         </shape>
 
@@ -19,7 +19,7 @@
             <size android:width="20dp"
                 android:height="20dp"/>
 
-            <solid android:color="#212B33"/>
+            <solid android:color="#154F57"/>
             <corners android:radius="400dp"/>
         </shape>
 

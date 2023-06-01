@@ -71,11 +71,14 @@
 
 
             <ImageButton
-                android:background="@drawable/icons8_history_50"
-                android:layout_weight="1"
+                android:id="@+id/btn_history"
                 android:layout_width="0dp"
-                android:layout_height="match_parent">
-            </ImageButton>
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/icons8_history_50"
+                android:contentDescription="history"
+                android:contextClickable="false"
+                android:isScrollContainer="false"></ImageButton>
             <Button
                 android:id="@+id/btn_phanTram"
                 android:text="% "
@@ -273,14 +276,22 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"/>
 
-            <Button
-                android:id="@+id/btn_C"
-                android:text="C"
-                android:textSize="40sp"
-                android:background="@drawable/custom_button3"
+<!--            <Button-->
+<!--                android:id="@+id/btn_C"-->
+<!--                android:text="C"-->
+<!--                android:textSize="40sp"-->
+<!--                android:background="@drawable/custom_button3"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"/>-->
+
+            <ImageButton
+                android:id="@+id/btn_Os"
                 android:layout_weight="1"
+                android:background="@drawable/icons8_upgrade_64"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent">
+            </ImageButton>
 
             <Button
                 android:id="@+id/btn_dauBang"

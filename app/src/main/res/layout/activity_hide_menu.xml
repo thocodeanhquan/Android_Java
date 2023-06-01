@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".HideMenu">
+
+    <TextView
+        android:id="@+id/tv_hideMenu"
+        android:text="Hide Menu"
+        android:textSize="30sp"
+        android:textColor="#2196F3"
+        android:textStyle="italic|bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_intro"
+        android:layout_below="@id/tv_hideMenu"
+        android:text="Chào mừng bạn đến với chế độ ẩn của app Máy Tính Thông Minh, ở đây bạn có thể lưu trữ những thông tin quan trọng mà không sợ ai phát hiện ^^"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/edt_passOld"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_intro"
+        android:layout_marginTop="100dp"
+        android:hint="Nhập mật khẩu cũ"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/edt_passNew"
+        android:layout_below="@id/edt_passOld"
+        android:hint="Nhập mật khẩu mới"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_doiMatKhau"
+        android:layout_below="@id/edt_passNew"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:text="Đổi mật khẩu"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:background="#17A6E6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_doiMatKhau"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:text="Bạn có thể đổi mật khẩu ở đây"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/tv_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageButton
+        android:background="@drawable/icons8_arrow_right_64"
+        android:id="@+id/img_btn_goto"
+        android:layout_below="@id/btn_doiMatKhau"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

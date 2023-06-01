@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VersionActivity">
+
+    <TextView
+        android:id="@+id/tv_nameApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="App: Máy tính thông minh"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_nameApp"
+        android:layout_centerInParent="true"
+        android:text="Version: Calculator 1.1.1"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_nameDev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_version"
+        android:layout_centerInParent="true"
+        android:text="Dev: Anh Quan"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_mota"
+        android:layout_below="@id/tv_nameDev"
+        android:textStyle="bold|italic"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Công dụng hơn một chiếc máy tính thông thường"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+</RelativeLayout>
