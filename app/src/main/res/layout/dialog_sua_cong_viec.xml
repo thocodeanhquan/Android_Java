@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:background="#1E857B"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_capNhatCV"
+        android:layout_centerHorizontal="true"
+        android:text="Cập nhật công việc"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="#FFEB3B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:hint="Nhập tên công việc"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:id="@+id/edt_tenCVEdit"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/tv_capNhatCV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/btn_CapNhatEdit"
+        android:textStyle="bold"
+        android:text="Cập nhật"
+        android:background="#8BC34A"
+        android:layout_below="@id/edt_tenCVEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_huyEdit"
+        android:text="Hủy"
+        android:background="#FF3D00"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_below="@id/edt_tenCVEdit"
+        android:layout_toRightOf="@id/btn_CapNhatEdit"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
